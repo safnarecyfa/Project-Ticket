@@ -73,6 +73,4 @@ bool login(int log) {
             system("cls");
             return login(log-1);
         }
-
-        cout << "coba";
 }

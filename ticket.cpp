@@ -12,17 +12,19 @@ struct Data {
 bool LogIn = false;
 
 bool login(int log);
+void menuUtama();
+void pesantiket();
 
 int main() {
         LogIn = login(3);
 
     if (LogIn) {
         system("cls");
-        cout << "Haloo";
+        menuUtama();
     } else {
         cout << "bye bye";
     }
-
+    
     return 0;
 }
 
@@ -41,7 +43,7 @@ bool login(int log) {
     bool NIP_valid = false;
     bool pass_valid = false;
 
-    cout << "Masukkan NIP : ";
+    cout << "Masukkan NIP      : ";
         getline(cin, main.NIP);
     cout << "Masukkan Password : ";
         getline(cin, main.pass);
@@ -64,7 +66,8 @@ bool login(int log) {
     }
 
     if (NIP_valid && pass_valid) {
-        cout << "Selamat Datang" << endl;
+        system("cls");
+        cout << "Selamat Datang di Wahhoo Admin !" << endl;
         getch();
         return true;
     } else {
@@ -73,4 +76,33 @@ bool login(int log) {
             system("cls");
             return login(log-1);
         }
+}
+
+void menuUtama(){
+    int pilih;
+    system("cls");
+    cout << "==== DATA PEMESANAN TIKET ====" << endl;
+    cout << "1. Pemesanan Tiket" << endl;
+    cout << "2. Keluar" << endl << endl;
+    cout << "Masukkan pilihan : " ; cin >> pilih;
+
+    if (pilih == 1) {
+        pesantiket();
+    } 
+    else if (pilih == 2) {
+        cout << "Terima kasih telah menggunakan program ini!" << endl;
+        system ("pause");
+        return; 
+    } 
+    else {
+        cout << "Pilihan tidak valid! Coba lagi." << endl;
+        cin.ignore();
+        cin.get(); 
+    }
+
+}
+
+void pesantiket(){
+    system("cls");
+    cout << "pesan" << endl;
 }

@@ -148,7 +148,7 @@ void pesantiket(){
     cin >> pesan.jmlDewasa;
     cin.ignore();
     
-    cout << "Apakah ada anak kecil dala rombongan? (y/n) : ";
+    cout << "Apakah ada anak kecil dalam rombongan? (y/n) : ";
     cin >> adaAnak;
     cin.ignore();
     
